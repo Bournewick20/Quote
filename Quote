@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .quote {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote">
+        <h1>Random Quote</h1>
+        <p id="quote-text"></p>
+    </div>
+
+    <script>
+        // Array of random quotes
+        var quotes = [
+            "The only way to do great work is to love what you do. – Steve Jobs",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
+            "Believe you can and you're halfway there. – Theodore Roosevelt",
+            "Your limitation—it's only your imagination.",
+            "Push yourself, because no one else is going to do it for you.",
+            "Great things never come from comfort zones."
+        ];
+
+        // Function to get a random quote
+        function getRandomQuote() {
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        // Display a random quote when the page loads
+        document.getElementById("quote-text").innerText = getRandomQuote();
+    </script>
+</body>
+</html>
